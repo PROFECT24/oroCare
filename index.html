@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orocare Dental Clinic | Best Dentist in Sivasagar, Assam</title>
+    <meta name="description" content="Orocare Dental Clinic in Sivasagar, Assam offers premium and comprehensive dental care including Root Canal Treatment (RCT), Cosmetic Dentistry, Tooth Extractions, and Dental Implants. Led by specialized oral health professionals.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #0a66c2;
+            --primary-dark: #004b93;
+            --primary-light: #e8f3ff;
+            --secondary: #00c6ff;
+            --accent: #25d366; /* WhatsApp Green */
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --border-color: #e2e8f0;
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --shadow-sm: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
+            --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: var(--radius-md);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header / Navbar */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(14, 165, 233, 0.1);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            background: #ffffff;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        .logo i {
+            font-size: 28px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+            font-weight: 400;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--text-muted);
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary);
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-cta-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            font-weight: 700;
+            font-size: 15px;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-light);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #1d4ed8);
+            color: var(--bg-white);
+            box-shadow: 0 4px 14px rgba(10, 102, 194, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(10, 102, 194, 0.4);
+        }
+
+        .btn-whatsapp {
+            background: var(--accent);
+            color: var(--bg-white);
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            color: var(--text-dark);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 160px;
+            padding-bottom: 80px;
+            background: radial-gradient(circle at top right, rgba(0, 198, 255, 0.08), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(10, 102, 194, 0.05), transparent 50%);
+            position: relative;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(10, 102, 194, 0.15);
+        }
+
+        .hero-title {
+            font-size: 52px;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+
+        .hero-title span {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            max-width: 540px;
+        }
+
+        .hero-cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 32px;
+        }
+
+        .stat-item h4 {
+            font-size: 28px;
+            color: var(--primary);
+        }
+
+        .stat-item p {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Hero Image Carousel/Card Combo */
+        .hero-image-wrapper {
+            position: relative;
+        }
+
+        .hero-main-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 16px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+        }
+
+        .doctor-card-hero {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 18px 24px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-top: 24px;
+            position: relative;
+            z-index: 2;
+            transition: var(--transition);
+        }
+
+        .doctor-card-hero:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg), 0 10px 20px rgba(10, 102, 194, 0.05);
+            border-color: rgba(10, 102, 194, 0.2);
+        }
+
+        .doctor-avatar-hero {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-light);
+            flex-shrink: 0;
+        }
+
+        .doctor-info-hero h4 {
+            font-size: 19px;
+            color: var(--text-dark);
+            margin-bottom: 2px;
+        }
+
+        .doctor-info-hero p {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .doctor-badge-hero {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 20px;
+        }
+
+        .badge-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .badge-text h5 {
+            font-size: 15px;
+            color: var(--text-dark);
+        }
+
+        .badge-text p {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Section Headings */
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px auto;
+        }
+
+        .section-subtitle {
+            color: var(--primary);
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        .section-title {
+            font-size: 38px;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .section-desc {
+            font-size: 16px;
+            color: var(--text-muted);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: var(--bg-white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            border-radius: var(--radius-lg);
+            padding: 40px 32px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            background: var(--bg-white);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(10, 102, 194, 0.15);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 24px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--primary);
+            color: var(--bg-white);
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .service-link {
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .service-link i {
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-link i {
+            transform: translateX(4px);
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: var(--bg-light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .about-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .about-img-item {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .about-img-item.large {
+            grid-column: span 2;
+            height: 280px;
+        }
+
+        .about-img-item.small {
+            height: 200px;
+        }
+
+        .about-img-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0;
+            transition: var(--transition);
+        }
+
+        .about-img-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .about-tagline {
+            font-size: 20px;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .about-text {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .about-features {
+            list-style: none;
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .about-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--text-dark);
+        }
+
+        .about-features li i {
+            color: var(--primary);
+            background: var(--primary-light);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .doctor-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .doctor-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-light);
+        }
+
+        .doctor-info h4 {
+            font-size: 18px;
+            color: var(--text-dark);
+        }
+
+        .doctor-info p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .doctor-badge {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 4px 10px;
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 20px;
+        }
+
+        /* Clinic Showcase / Gallery Section */
+        .showcase {
+            padding: 100px 0;
+            background: var(--bg-white);
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .showcase-card {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            height: 350px;
+        }
+
+        .showcase-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0;
+            transition: var(--transition);
+        }
+
+        .showcase-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px;
+            background: linear-gradient(to top, rgba(10, 102, 194, 0.95), transparent);
+            color: var(--bg-white);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .showcase-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .showcase-card:hover .showcase-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .showcase-overlay h4 {
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+
+        .showcase-overlay p {
+            font-size: 14px;
+            opacity: 0.85;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: var(--bg-light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 48px;
+        }
+
+        .contact-info-panel {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-method {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .contact-method:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-icon {
+            width: 52px;
+            height: 52px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            font-size: 16px;
+            margin-bottom: 6px;
+            color: var(--text-dark);
+        }
+
+        .contact-details p, .contact-details a {
+            font-size: 15px;
+            color: var(--text-muted);
+        }
+
+        .contact-details a:hover {
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-sm);
+            background: var(--bg-light);
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: var(--transition);
+        }
+
+        .social-btn:hover {
+            background: var(--primary);
+            color: var(--bg-white);
+            transform: translateY(-2px);
+        }
+
+        .map-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 16px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .map-iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 380px;
+            border: 0;
+            border-radius: var(--radius-md);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 60px 0 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            color: var(--bg-white);
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-logo i {
+            color: var(--secondary);
+        }
+
+        .footer-desc {
+            font-size: 14px;
+            line-height: 1.8;
+            max-width: 320px;
+        }
+
+        .footer-title {
+            color: var(--bg-white);
+            font-size: 16px;
+            margin-bottom: 24px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        .footer-links a:hover {
+            color: var(--bg-white);
+            padding-left: 6px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 13px;
+        }
+
+        /* Float Action Buttons */
+        .float-btn-group {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 999;
+        }
+
+        .float-btn {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-white);
+            font-size: 24px;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+        }
+
+        .float-btn:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .float-btn.whatsapp {
+            background-color: var(--accent);
+        }
+
+        .float-btn.call {
+            background-color: var(--primary);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            .hero-image-wrapper {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+            .showcase-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .showcase-card.large {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--bg-white);
+                flex-direction: column;
+                padding: 40px;
+                align-items: flex-start;
+                gap: 24px;
+                transition: var(--transition);
+                border-top: 1px solid var(--border-color);
+                box-shadow: var(--shadow-md);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-cta-group {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 40px;
+            }
+
+            .hero-stats {
+                gap: 24px;
+            }
+
+            .showcase-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .showcase-card.large {
+                grid-column: span 1;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-tooth"></i> Orocare<span>Clinic</span>
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-cta-group">
+                <a href="tel:+918011364672" class="btn btn-outline"><i class="fa-solid fa-phone"></i> Call Us</a>
+                <a href="https://wa.me/918011364672?text=Hello%20Orocare%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Book Now</a>
+            </div>
+
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="hero-tag"><i class="fa-solid fa-circle-check"></i> Sivasagar's Premier Dental Center</span>
+                <h1 class="hero-title">Experience <span>Superior Dental Care</span> & Beautiful Smiles</h1>
+                <p class="hero-desc">Welcome to Orocare Dental Clinic. We offer advanced dental procedures and general oral healthcare with absolute comfort and modern expertise.</p>
+                
+                <div class="hero-cta-buttons">
+                    <a href="https://wa.me/918011364672?text=Hello%20Orocare%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary btn-lg"><i class="fa-brands fa-whatsapp"></i> Book Appointment</a>
+                    <a href="tel:+918011364672" class="btn btn-outline btn-lg"><i class="fa-solid fa-phone"></i> +91 80113 64672</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h4>100%</h4>
+                        <p>Patient Care</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>4.9★</h4>
+                        <p>Top Rated</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>Modern</h4>
+                        <p>Equipment</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper">
+                <div class="hero-main-card">
+                    <img src="treatment-1.jpg" alt="Dr. Rafidul Alam treating a patient" class="hero-image">
+                </div>
+                
+                <!-- Doctor Profile Card below the image -->
+                <div class="doctor-card-hero">
+                    <img src="doctor-portrait.jpg" alt="Dr. Rafidul Alam Dentist" class="doctor-avatar-hero">
+                    <div class="doctor-info-hero">
+                        <h4>Dr. Rafidul Alam</h4>
+                        <p>Specialist Dental Surgeon & Consultant</p>
+                        <span class="doctor-badge-hero"><i class="fa-solid fa-circle-check"></i> IDA Assam Member</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">What We Offer</span>
+                <h2 class="section-title">Specialized Dental Services</h2>
+                <p class="section-desc">Our clinic provides comprehensive solutions for all kinds of dental concerns, ranging from routing hygiene checks to complex surgical setups.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>Cosmetic Dentistry & Smile Makeovers</h3>
+                    <p>Transform your smile with veneers, crowns, professional whitening, and aesthetic alignments built to give you the confidence you deserve.</p>
+                    <a href="https://wa.me/918011364672?text=I%20want%20to%20know%20more%20about%20Cosmetic%20Dentistry" class="service-link" target="_blank">Consult Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-tooth"></i></div>
+                    <h3>Root Canal Treatment (RCT)</h3>
+                    <p>Save damaged or infected teeth with precise, virtually pain-free root canal procedures performed using modern rotary dental technology.</p>
+                    <a href="https://wa.me/918011364672?text=I%20want%20to%20know%20more%20about%20Root%20Canal%20Treatment" class="service-link" target="_blank">Consult Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-kit-medical"></i></div>
+                    <h3>Extractions & Surgical Procedures</h3>
+                    <p>Safe and completely sterilized extractions for wisdom teeth, severely damaged roots, or orthodontic prepping in a comfortable setup.</p>
+                    <a href="https://wa.me/918011364672?text=I%20want%20to%20know%20more%20about%20Tooth%20Extractions" class="service-link" target="_blank">Consult Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-screwdriver"></i></div>
+                    <h3>Dental Implants</h3>
+                    <p>Permanently replace missing teeth with premium dental implants that look, feel, and function just like your natural healthy teeth.</p>
+                    <a href="https://wa.me/918011364672?text=I%20want%20to%20know%20more%20about%20Dental%20Implants" class="service-link" target="_blank">Consult Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about" id="about">
+        <div class="container about-grid">
+            <div class="about-images">
+                <div class="about-img-item large">
+                    <img src="doctor-conference.png" alt="Indian Dental Association Conference">
+                </div>
+                <div class="about-img-item small">
+                    <img src="clinic-equipment.png" alt="Modern dental equipment">
+                </div>
+                <div class="about-img-item small">
+                    <img src="treatment-2.jpg" alt="Modern dental checkup">
+                </div>
+            </div>
+
+            <div class="about-content">
+                <span class="section-subtitle">About Orocare</span>
+                <h2 class="section-title">A Specialized Care Center for Oral Health</h2>
+                <p class="about-tagline">Providing trusted, hygienic, and state-of-the-art dental services in Sivasagar, Assam.</p>
+                <p class="about-text">Orocare Dental Clinic is committed to delivering quality dental care to the community. Under professional and experienced hands, we use high-standard sterilization practices and diagnostic workflows. Whether you need standard checkups or advanced cosmetic surgeries, our patient-first approach makes your journey stress-free.</p>
+                
+                <ul class="about-features">
+                    <li><i class="fa-solid fa-check"></i> Advanced Technology</li>
+                    <li><i class="fa-solid fa-check"></i> Strict Sanitization</li>
+                    <li><i class="fa-solid fa-check"></i> Cozy Patient Lounge</li>
+                    <li><i class="fa-solid fa-check"></i> Certified Dental Experts</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase / Gallery Section -->
+    <section class="showcase" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Clinic Gallery</span>
+                <h2 class="section-title">Transformations & Facilities</h2>
+                <p class="section-desc">Take a look inside our clinic, modern operational setups, and specialized diagnostic areas designed to make you feel relaxed.</p>
+            </div>
+
+            <div class="showcase-grid">
+                <div class="showcase-card">
+                    <img src="clinic-equipment.png" alt="Sterilized dental chair and machinery">
+                    <div class="showcase-overlay">
+                        <h4>Premium Equipment</h4>
+                        <p>Modern hygiene and treatment lounge</p>
+                    </div>
+                </div>
+                <div class="showcase-card">
+                    <img src="treatment-1.jpg" alt="Dental surgeon during treatment">
+                    <div class="showcase-overlay">
+                        <h4>Clinical Precision</h4>
+                        <p>Safe treatment protocols</p>
+                    </div>
+                </div>
+                <div class="showcase-card">
+                    <img src="doctor-conference.png" alt="Dentist presentation at IDA">
+                    <div class="showcase-overlay">
+                        <h4>Professional Recognition</h4>
+                        <p>Indian Dental Association presence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Contact & Location Details</h2>
+                <p class="section-desc">Have queries regarding fees, appointments, or timings? Get in touch with our front desk directly by calling or visiting.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info-panel">
+                    <!-- Location -->
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="contact-details">
+                            <h4>Our Address</h4>
+                            <p>In front of Sibsagar Press Club, Babu Patty, Dolmukh Charali, Sivasagar, Assam 785640</p>
+                        </div>
+                    </div>
+
+                    <!-- Call -->
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="contact-details">
+                            <h4>Phone Support</h4>
+                            <a href="tel:+918011364672">+91 80113 64672</a>
+                            <p style="font-size:13px; margin-top:4px;">Available for calls during clinic hours</p>
+                        </div>
+                    </div>
+
+                    <!-- Instagram -->
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+                        <div class="contact-details">
+                            <h4>Instagram Updates</h4>
+                            <a href="https://www.instagram.com/orocaredentalclinic_sibsagar/" target="_blank">@orocaredentalclinic_sibsagar</a>
+                            <p style="font-size:13px; margin-top:4px;">Check transformations & hygiene updates</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Handles -->
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/orocaredentalclinic_sibsagar/" target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/918011364672" target="_blank" class="social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="tel:+918011364672" class="social-btn"><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Card -->
+                <div class="map-card">
+                    <!-- Google Maps Embed -->
+                    <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.9161726715694!2d94.630045!3d26.9852222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x374737af2c5950ad%3A0xc3676882c0f2095f!2sPress%20Club%2C%20Sivasagar!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <div class="footer-logo">
+                    <i class="fa-solid fa-tooth"></i> Orocare Clinic
+                </div>
+                <p class="footer-desc">Your trusted companion for premium oral healthcare services, located centrally at Sivasagar, Assam.</p>
+            </div>
+            
+            <div>
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Timing Info</h4>
+                <p style="font-size: 14px; margin-bottom: 8px;">Monday - Saturday:</p>
+                <p style="font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 16px;">10:00 AM - 07:00 PM</p>
+                <p style="font-size: 14px; margin-bottom: 8px;">Sunday:</p>
+                <p style="font-size: 14px; font-weight: 700; color: #fff;">By Appointment Only</p>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Orocare Dental Clinic. All Rights Reserved.</p>
+            <p>Designed for premium healthcare experience</p>
+        </div>
+    </footer>
+
+    <!-- Fixed Floating CTA Elements -->
+    <div class="float-btn-group">
+        <a href="tel:+918011364672" class="float-btn call" title="Call Us"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://wa.me/918011364672?text=Hello%20Orocare%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="float-btn whatsapp" title="Chat via WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Header styling change on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Toggle mobile navigation menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.replace('fa-bars', 'fa-xmark');
+            } else {
+                icon.classList.replace('fa-xmark', 'fa-bars');
+            }
+        });
+
+        // Close menu when clicking link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuToggle.querySelector('i').classList.replace('fa-xmark', 'fa-bars');
+            });
+        });
+
+        // Simple Active State Indicator on Scroll
+        const sections = document.querySelectorAll('section, header');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
