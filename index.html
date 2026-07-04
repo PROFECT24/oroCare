@@ -34,7 +34,9 @@
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * {
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -42,6 +44,9 @@
 
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100%;
         }
 
         body {
@@ -49,6 +54,9 @@
             color: var(--text-dark);
             background-color: var(--bg-light);
             line-height: 1.6;
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
             overflow-x: hidden;
         }
 
@@ -76,6 +84,8 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
+            box-sizing: border-box;
+            min-width: 0;
         }
 
         /* Header / Navbar */
@@ -83,7 +93,9 @@
             position: fixed;
             top: 0;
             left: 0;
+            right: 0;
             width: 100%;
+            max-width: 100%;
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
@@ -715,12 +727,19 @@
         .contact {
             padding: 100px 0;
             background: var(--bg-light);
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            min-width: 0;
         }
 
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
             gap: 48px;
+            max-width: 100%;
+            overflow: hidden;
+            min-width: 0;
         }
 
         .contact-info-panel {
@@ -803,6 +822,10 @@
             height: 100%;
             display: flex;
             flex-direction: column;
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+            overflow-x: hidden;
         }
 
         .map-iframe {
@@ -819,6 +842,10 @@
             color: #94a3b8;
             padding: 60px 0 30px 0;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            min-width: 0;
         }
 
         .footer-grid {
@@ -826,6 +853,9 @@
             grid-template-columns: 1.5fr 1fr 1fr;
             gap: 48px;
             margin-bottom: 48px;
+            max-width: 100%;
+            overflow: hidden;
+            min-width: 0;
         }
 
         .footer-logo {
@@ -957,21 +987,28 @@
             .nav-menu {
                 position: fixed;
                 top: 80px;
-                left: -100%;
+                left: 0;
+                transform: translateX(-100%);
                 width: 100%;
+                max-width: 100%;
                 height: calc(100vh - 80px);
                 background: var(--bg-white);
                 flex-direction: column;
-                padding: 40px;
+                padding: 40px 24px;
                 align-items: flex-start;
                 gap: 24px;
-                transition: var(--transition);
+                transition: transform 0.3s ease, opacity 0.3s ease;
                 border-top: 1px solid var(--border-color);
                 box-shadow: var(--shadow-md);
+                overflow-x: hidden;
+                opacity: 0;
+                pointer-events: none;
             }
 
             .nav-menu.active {
-                left: 0;
+                transform: translateX(0);
+                opacity: 1;
+                pointer-events: auto;
             }
 
             .menu-toggle {
@@ -980,6 +1017,10 @@
 
             .nav-cta-group {
                 display: none;
+            }
+
+            .nav-menu {
+                padding-top: 24px;
             }
 
             .hero {
@@ -1062,6 +1103,9 @@
             .footer-grid {
                 grid-template-columns: 1fr;
                 gap: 32px;
+                max-width: 100%;
+                overflow: hidden;
+                min-width: 0;
             }
 
             footer {
@@ -1186,6 +1230,37 @@
 
             .logo i {
                 font-size: 22px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .container {
+                padding: 0 12px;
+            }
+
+            .contact-grid {
+                gap: 18px;
+            }
+
+            .contact-info-panel,
+            .map-card,
+            .footer-grid,
+            .footer-bottom {
+                width: 100%;
+                max-width: 100%;
+                min-width: 0;
+            }
+
+            .contact-method {
+                gap: 12px;
+            }
+
+            .section-header {
+                padding: 0 4px;
+            }
+
+            .footer-bottom {
+                padding: 0 4px;
             }
         }
     </style>
